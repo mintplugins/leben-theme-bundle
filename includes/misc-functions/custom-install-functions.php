@@ -120,3 +120,15 @@ function leben_theme_bundle_smooth_scroll_up_setup( $theme_bundle_slug ){
 	}
 }
 add_action( 'mp_stacks_additional_installation_actions', 'leben_theme_bundle_smooth_scroll_up_setup' );
+function leben_maybe_define_wc_functions(){
+	if (!function_exists('wc_get_screen_ids')) {
+		function wc_get_screen_ids (){
+			return false;
+		}
+	}
+}
+add_action( 'admin_init', 'leben_maybe_define_wc_functions');
+
+
+
+

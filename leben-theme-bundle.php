@@ -180,6 +180,30 @@ function leben_theme_bundle_include_files(){
 			 */
 			require( LEBEN_THEME_BUNDLE_PLUGIN_DIR . 'includes/updater/leben-theme-bundle-update.php' );
 			
+			/**
+			 * Include Home Stack Template
+			 */
+			require( LEBEN_THEME_BUNDLE_PLUGIN_DIR . 'includes/stack-templates/leben-home/leben-home.php' );
+			
+			/**
+			 * Include Store Stack Template
+			 */
+			require( LEBEN_THEME_BUNDLE_PLUGIN_DIR . 'includes/stack-templates/leben-store/leben-store.php' );
+			
+			/**
+			 * Include Blog Stack Template
+			 */
+			require( LEBEN_THEME_BUNDLE_PLUGIN_DIR . 'includes/stack-templates/leben-blog/leben-blog.php' );
+			
+			/**
+			 * Include Footer Stack Template
+			 */
+			require( LEBEN_THEME_BUNDLE_PLUGIN_DIR . 'includes/stack-templates/leben-footer/leben-footer.php' );
+			
+			/**
+			 * Include About Us Stack Template
+			 */
+			require( LEBEN_THEME_BUNDLE_PLUGIN_DIR . 'includes/stack-templates/leben-about-us/leben-about-us.php' );
 			
 						
 		}
@@ -232,25 +256,22 @@ function leben_theme_bundle_dependencies_array(){
 		'mp_menu_textdomain' => 'mp-menu-check.php',
 		'mp_buttons_textdomain' => 'mp-buttons-check.php',
 		'mp_customizer_backups_textdomain' => 'mp-customizer-backups-check.php',
+		'leben_theme_bundle_child_theme_exists' => 'leben-theme-bundle-child-theme.php',
+		'WC' => 'woocommerce-check.php',
 		
 		//Pasted from Stack Template's Utility File:
 		'mp_stacks_features_textdomain' => 'mp-stacks-features-check.php',
-		'mp_stacks_forms_textdomain' => 'mp-stacks-forms-check.php',
 		'mp_stacks_googlefonts_textdomain' => 'mp-stacks-googlefonts-check.php',
-		'mp_stacks_icons_textdomain' => 'mp-stacks-icons-check.php',
 		'mp_stacks_linkgrid_textdomain' => 'mp-stacks-linkgrid-check.php',
-		'mp_stacks_mailchimp_textdomain' => 'mp-stacks-mailchimp-check.php',
 		'mp_stacks_parallax_textdomain' => 'mp-stacks-parallax-check.php',
 		'mp_stacks_postgrid_textdomain' => 'mp-stacks-postgrid-check.php',
-		'mp_stacks_second_text_textdomain' => 'mp-stacks-second-text-check.php',
-		'mp_stacks_second_video_textdomain' => 'mp-stacks-second-video-check.php',
-		'mp_stacks_shadows_textdomain' => 'mp-stacks-shadows-check.php',
 		'mp_stacks_slider_textdomain' => 'mp-stacks-slider-check.php',
 		'mp_stacks_socialgrid_textdomain' => 'mp-stacks-socialgrid-check.php',
 		'mp_stacks_sociallinks_textdomain' => 'mp-stacks-sociallinks-check.php',
 		'mp_stacks_video_backgrounds_textdomain' => 'mp-stacks-video-backgrounds-check.php',
 		'mp_stacks_widgets_textdomain' => 'mp-stacks-widgets-check.php',
 		'mp_stacks_woogrid_textdomain' => 'mp-stacks-woogrid-check.php',
+
 		
 		//Don't forget to copy and paste the "check" files into the "includes > plugin-checker > included-plugins" directory.
 
