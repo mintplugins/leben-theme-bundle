@@ -136,7 +136,7 @@ else{
 	 */
 	function mp_stacks_templates_leben_home_to_default_stacks( $default_stacks_to_create ){ 
 				
-		$default_stacks_to_create['page']['leben_home'] = array( 'title' => 'Home','is_home' => true,'page_template' => 'page','add_to_primary_menu' => 'true', );
+		$default_stacks_to_create['page']['leben_home'] = array( 'title' => 'Home','is_home' => true,'page_template' => 'default','add_to_primary_menu' => 'true', );
 		
 		return $default_stacks_to_create;
 	
@@ -2166,7 +2166,7 @@ else{
       'mp_stack_order' => 1030,
       '_edit_lock' => 
       array (
-        'value' => '1461016439:3',
+        'value' => '1461099868:8',
       ),
       'mp_stack_id' => 
       array (
@@ -2174,7 +2174,7 @@ else{
       ),
       '_edit_last' => 
       array (
-        'value' => '3',
+        'value' => '8',
       ),
       'brick_first_content_type' => 
       array (
@@ -2338,6 +2338,10 @@ Adventure&lt;/p&gt;
       'brick_split_percentage' => 
       array (
         'value' => '50',
+      ),
+      'brick_bg_color' => 
+      array (
+        'value' => '#0a0a0a',
       ),
     ),
     'brick_5' => 
