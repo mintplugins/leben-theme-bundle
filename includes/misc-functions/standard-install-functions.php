@@ -29,8 +29,8 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 /**
  * Parent Plugin Installation Class - used with activation hooks for plugins that are license and require other plugins
  */
-require( LANDSCAPE_THEME_BUNDLE_PLUGIN_DIR . 'includes/misc-functions/class-parent-plugin-installation.php' );
-require( LANDSCAPE_THEME_BUNDLE_PLUGIN_DIR . 'includes/misc-functions/custom-install-functions.php' );
+require( LEBEN_THEME_BUNDLE_PLUGIN_DIR . 'includes/misc-functions/class-parent-plugin-installation.php' );
+require( LEBEN_THEME_BUNDLE_PLUGIN_DIR . 'includes/misc-functions/custom-install-functions.php' );
 
 /**
  * Install
@@ -104,7 +104,7 @@ function leben_theme_bundle_install() {
 	new MP_CORE_Licensed_Parent_Plugin_Installation_Routine( $mp_core_options['mp_stacks_theme_bundle_being_installed'] );
 
 }
-register_activation_hook( LANDSCAPE_THEME_BUNDLE_PLUGIN_FILE, 'leben_theme_bundle_install' );
+register_activation_hook( LEBEN_THEME_BUNDLE_PLUGIN_FILE, 'leben_theme_bundle_install' );
 
 /**
  * Init doesn't fire on activation hooks - but we need this class to run in both cases so we re-hook it here.
