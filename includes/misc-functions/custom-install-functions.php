@@ -35,18 +35,28 @@ if ( ! defined( 'ABSPATH' ) ) exit;
  */
 function leben_theme_bundle_theme_mods(){
 			
-	return array (
-	
-		 0 => false,
-		  'mp_knapstack_text_color' => '#35591c', 
-		  'mp_knapstack_subtext_color' => '#3c592d', 
-		  'mp_knapstack_font_family' => 'Arvo', 
-		  'mp_knapstack_button_submit' => '#4d7d2a', 
-		  'mp_knapstack_button_hover' => '#347c00', 
-		  'mp_knapstack_form_input_border_radius' => '2', 
-		  'mp_knapstack_form_input_border_thickness' => '2',
-		  'mp_stacks_footer_stack' => 'none'
-
+	return array ( 
+		0 => false, 
+		'mp_knapstack_header_bg_color_opacity' => '1', 
+		'mp_knapstack_header_bg_color' => '#0a0a0a', 
+		'mp_knapstack_header_font' => 'Abel', 
+		'mp_knapstack_header_fixed' => 'fixed', 
+		'mp_knapstack_header_bump_site_down' => true, 
+		'mp_core_logo' => 'http://demo.mintplugins.com/leben/wp-content/uploads/sites/15/2016/01/lebenlogo.jpg', 
+		'mp_core_logo_width' => '100', 
+		'mp_core_logo_height' => '50', 
+		'nav_menu_locations' => array ( 'primary' => 8, ), 
+		'mp_knapstack_font_family' => 'Abel', 
+		'mp_knapstack_page_header_bg_color' => '#1e1e1e', 
+		'mp_knapstack_page_header_button_submit' => '#1e1e1e', 
+		'mp_knapstack_page_header_button_hover' => '#1e1e1e', 
+		'mp_knapstack_page_header_button_text_hover' => '#ffffff', 
+		'mp_knapstack_button_submit' => '#0a0a0a', 
+		'mp_knapstack_button_hover' => '#0a0a0a', 
+		'mp_knapstack_borders' => '#ffffff', 
+		'mp_knapstack_form_input_border_radius' => '3', 
+		'mp_knapstack_background_color' => '#fcfcfc', 
+		'mp_stacks_footer_stack' => '14', 
 	);
 	
 }

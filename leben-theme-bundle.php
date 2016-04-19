@@ -33,20 +33,20 @@ License: GPL2
 |--------------------------------------------------------------------------
 */
 // Plugin version
-if( !defined( 'RESTORE_CHURCH_THEME_BUNDLE_VERSION' ) )
-	define( 'RESTORE_CHURCH_THEME_BUNDLE_VERSION', '1.0.0.0' );
+if( !defined( 'LEBEN_THEME_BUNDLE_VERSION' ) )
+	define( 'LEBEN_THEME_BUNDLE_VERSION', '1.0.0.0' );
 
 // Plugin Folder URL
-if( !defined( 'RESTORE_CHURCH_THEME_BUNDLE_PLUGIN_URL' ) )
-	define( 'RESTORE_CHURCH_THEME_BUNDLE_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
+if( !defined( 'LEBEN_THEME_BUNDLE_PLUGIN_URL' ) )
+	define( 'LEBEN_THEME_BUNDLE_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 
 // Plugin Folder Path
-if( !defined( 'RESTORE_CHURCH_THEME_BUNDLE_PLUGIN_DIR' ) )
-	define( 'RESTORE_CHURCH_THEME_BUNDLE_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
+if( !defined( 'LEBEN_THEME_BUNDLE_PLUGIN_DIR' ) )
+	define( 'LEBEN_THEME_BUNDLE_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 
 // Plugin Root File
-if( !defined( 'RESTORE_CHURCH_THEME_BUNDLE_PLUGIN_FILE' ) )
-	define( 'RESTORE_CHURCH_THEME_BUNDLE_PLUGIN_FILE', __FILE__ );
+if( !defined( 'LEBEN_THEME_BUNDLE_PLUGIN_FILE' ) )
+	define( 'LEBEN_THEME_BUNDLE_PLUGIN_FILE', __FILE__ );
 
 /*
 |--------------------------------------------------------------------------
@@ -65,7 +65,7 @@ if( !defined( 'RESTORE_CHURCH_THEME_BUNDLE_PLUGIN_FILE' ) )
 function leben_theme_bundle_textdomain() {
 
 	// Set filter for plugin's languages directory
-	$leben_theme_bundle_lang_dir = dirname( plugin_basename( RESTORE_CHURCH_THEME_BUNDLE_PLUGIN_FILE ) ) . '/languages/';
+	$leben_theme_bundle_lang_dir = dirname( plugin_basename( LEBEN_THEME_BUNDLE_PLUGIN_FILE ) ) . '/languages/';
 	$leben_theme_bundle_lang_dir = apply_filters( 'leben_theme_bundle_languages_directory', $leben_theme_bundle_lang_dir );
 
 
@@ -94,7 +94,7 @@ add_action( 'init', 'leben_theme_bundle_textdomain', 1 );
 /**
  * Activation Hook Function - Gets Stack Pack License, Redirects to installation of dependencies, saves Theme MetaData.
  */
-require( RESTORE_CHURCH_THEME_BUNDLE_PLUGIN_DIR . 'includes/misc-functions/standard-install-functions.php' );
+require( LEBEN_THEME_BUNDLE_PLUGIN_DIR . 'includes/misc-functions/standard-install-functions.php' );
 
 /*
 |--------------------------------------------------------------------------
@@ -111,17 +111,17 @@ function leben_theme_bundle_include_files(){
 		/**
 		 * Include Plugin Checker
 		 */
-		require( RESTORE_CHURCH_THEME_BUNDLE_PLUGIN_DIR . '/includes/plugin-checker/class-plugin-checker.php' );
+		require( LEBEN_THEME_BUNDLE_PLUGIN_DIR . '/includes/plugin-checker/class-plugin-checker.php' );
 		
 		/**
 		 * Include Plugin Installer
 		 */
-		require( RESTORE_CHURCH_THEME_BUNDLE_PLUGIN_DIR . '/includes/plugin-checker/class-plugin-installer.php' );
+		require( LEBEN_THEME_BUNDLE_PLUGIN_DIR . '/includes/plugin-checker/class-plugin-installer.php' );
 		
 		/**
 		 * Check if mp_core in installed
 		 */
-		include_once( RESTORE_CHURCH_THEME_BUNDLE_PLUGIN_DIR . 'includes/plugin-checker/included-plugins/mp-core-check.php' );
+		include_once( LEBEN_THEME_BUNDLE_PLUGIN_DIR . 'includes/plugin-checker/included-plugins/mp-core-check.php' );
 		
 	}
 	//If mp_core IS Active
@@ -146,7 +146,7 @@ function leben_theme_bundle_include_files(){
 			/**
 			 * Update script - keeps this plugin up to date
 			 */
-			require( RESTORE_CHURCH_THEME_BUNDLE_PLUGIN_DIR . 'includes/updater/leben-theme-bundle-update.php' );
+			require( LEBEN_THEME_BUNDLE_PLUGIN_DIR . 'includes/updater/leben-theme-bundle-update.php' );
 			
 				
 		}
@@ -156,7 +156,7 @@ function leben_theme_bundle_include_files(){
 			/**
 			 * Update script - keeps this plugin up to date
 			 */
-			require( RESTORE_CHURCH_THEME_BUNDLE_PLUGIN_DIR . 'includes/updater/leben-theme-bundle-update.php' );
+			require( LEBEN_THEME_BUNDLE_PLUGIN_DIR . 'includes/updater/leben-theme-bundle-update.php' );
 			
 			//Loop through each required plugin and check for it
 			foreach( leben_theme_bundle_dependencies_array() as $function_exist_name => $checker_file_name ){
@@ -164,7 +164,7 @@ function leben_theme_bundle_include_files(){
 				/**
 				 * Check the status of the required plugin and install it if not. Activate it if it is inactive
 				 */
-				require( RESTORE_CHURCH_THEME_BUNDLE_PLUGIN_DIR . 'includes/plugin-checker/included-plugins/' . $checker_file_name ); 
+				require( LEBEN_THEME_BUNDLE_PLUGIN_DIR . 'includes/plugin-checker/included-plugins/' . $checker_file_name ); 
 				
 			}
 
@@ -178,7 +178,7 @@ function leben_theme_bundle_include_files(){
 			/**
 			 * Update script - keeps this plugin up to date
 			 */
-			require( RESTORE_CHURCH_THEME_BUNDLE_PLUGIN_DIR . 'includes/updater/leben-theme-bundle-update.php' );
+			require( LEBEN_THEME_BUNDLE_PLUGIN_DIR . 'includes/updater/leben-theme-bundle-update.php' );
 			
 			
 						
@@ -232,25 +232,25 @@ function leben_theme_bundle_dependencies_array(){
 		'mp_menu_textdomain' => 'mp-menu-check.php',
 		'mp_buttons_textdomain' => 'mp-buttons-check.php',
 		'mp_customizer_backups_textdomain' => 'mp-customizer-backups-check.php',
-		'mp_easy_icons_textdomain' => 'mp-easy-icons-check.php',
-		'mp_events_textdomain' => 'mp-events-check.php',
-		'Church_Theme_Content' => 'church-theme-content.php',
 		
 		//Pasted from Stack Template's Utility File:
 		'mp_stacks_features_textdomain' => 'mp-stacks-features-check.php',
-		'mp_stacks_animation_textdomain' => 'mp-stacks-animation-check.php',
-		'mp_stacks_eventgrid_textdomain' => 'mp-stacks-eventgrid-check.php',
 		'mp_stacks_forms_textdomain' => 'mp-stacks-forms-check.php',
 		'mp_stacks_googlefonts_textdomain' => 'mp-stacks-googlefonts-check.php',
-		'mp_stacks_googlemaps_textdomain' => 'mp-stacks-googlemaps-check.php',
 		'mp_stacks_icons_textdomain' => 'mp-stacks-icons-check.php',
-		'mp_stacks_image_style_textdomain' => 'mp-stacks-image-style-check.php',
 		'mp_stacks_linkgrid_textdomain' => 'mp-stacks-linkgrid-check.php',
 		'mp_stacks_mailchimp_textdomain' => 'mp-stacks-mailchimp-check.php',
-		'mp_stacks_navigation_textdomain' => 'mp-stacks-navigation-check.php',
 		'mp_stacks_parallax_textdomain' => 'mp-stacks-parallax-check.php',
-		'mp_stacks_sermongrid_textdomain' => 'mp-stacks-sermongrid-check.php',
+		'mp_stacks_postgrid_textdomain' => 'mp-stacks-postgrid-check.php',
+		'mp_stacks_second_text_textdomain' => 'mp-stacks-second-text-check.php',
+		'mp_stacks_second_video_textdomain' => 'mp-stacks-second-video-check.php',
+		'mp_stacks_shadows_textdomain' => 'mp-stacks-shadows-check.php',
+		'mp_stacks_slider_textdomain' => 'mp-stacks-slider-check.php',
+		'mp_stacks_socialgrid_textdomain' => 'mp-stacks-socialgrid-check.php',
 		'mp_stacks_sociallinks_textdomain' => 'mp-stacks-sociallinks-check.php',
+		'mp_stacks_video_backgrounds_textdomain' => 'mp-stacks-video-backgrounds-check.php',
+		'mp_stacks_widgets_textdomain' => 'mp-stacks-widgets-check.php',
+		'mp_stacks_woogrid_textdomain' => 'mp-stacks-woogrid-check.php',
 		
 		//Don't forget to copy and paste the "check" files into the "includes > plugin-checker > included-plugins" directory.
 
