@@ -811,7 +811,7 @@ else{
       ),
       'brick_max_width' => 
       array (
-        'value' => '2000',
+        'value' => '999999999',
       ),
       'woogrid_isotope_navigation' => 
       array (

@@ -458,7 +458,7 @@ else{
       ),
       'brick_max_width' => 
       array (
-        'value' => '2000',
+        'value' => '999999999',
       ),
       'brick_min_above_below' => 
       array (
@@ -1067,7 +1067,7 @@ else{
       ),
       'brick_max_width' => 
       array (
-        'value' => '2000',
+        'value' => '9999999',
       ),
       'brick_min_above_below' => 
       array (
@@ -1688,7 +1688,7 @@ else{
       ),
       'brick_max_width' => 
       array (
-        'value' => '2000',
+        'value' => '99999999',
       ),
       'brick_min_above_below' => 
       array (
@@ -2190,7 +2190,7 @@ else{
       ),
       'brick_video_url' => 
       array (
-        'value' => 'https://cdn.shopify.com/s/files/1/0899/6642/files/insta_gear_fortheweekend_small.mp4?11197141753190337088',
+        'value' => '',
       ),
       'brick_video_max_width' => 
       array (
@@ -3153,7 +3153,7 @@ Adventure&lt;/p&gt;
       ),
       'brick_max_width' => 
       array (
-        'value' => '2000',
+        'value' => '999999999',
       ),
       'brick_min_below' => 
       array (

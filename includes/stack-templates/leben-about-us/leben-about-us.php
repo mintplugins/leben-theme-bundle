@@ -1156,7 +1156,7 @@ else{
       ),
       'brick_max_width' => 
       array (
-        'value' => '2000',
+        'value' => '999999',
       ),
       'brick_min_above_below' => 
       array (
@@ -1906,7 +1906,7 @@ else{
       ),
       'brick_max_width' => 
       array (
-        'value' => '1500',
+        'value' => '9999999999',
       ),
       'brick_min_above_below' => 
       array (
