@@ -16,19 +16,12 @@
  /**
  * If required add-ons aren't active, stop and install it now
  */
-if (!function_exists('mp_stacks_features_textdomain') || !function_exists('mp_stacks_forms_textdomain') || !function_exists('mp_stacks_googlefonts_textdomain') || !function_exists('mp_stacks_icons_textdomain') || !function_exists('mp_stacks_linkgrid_textdomain') || !function_exists('mp_stacks_mailchimp_textdomain') || !function_exists('mp_stacks_parallax_textdomain') || !function_exists('mp_stacks_postgrid_textdomain') || !function_exists('mp_stacks_second_text_textdomain') || !function_exists('mp_stacks_second_video_textdomain') || !function_exists('mp_stacks_shadows_textdomain') || !function_exists('mp_stacks_slider_textdomain') || !function_exists('mp_stacks_socialgrid_textdomain') || !function_exists('mp_stacks_sociallinks_textdomain') || !function_exists('mp_stacks_video_backgrounds_textdomain') || !function_exists('mp_stacks_widgets_textdomain') || !function_exists('mp_stacks_woogrid_textdomain')){
+if (!function_exists('mp_stacks_features_textdomain') || !function_exists('mp_stacks_googlefonts_textdomain') || !function_exists('mp_stacks_linkgrid_textdomain') || !function_exists('mp_stacks_parallax_textdomain') || !function_exists('mp_stacks_postgrid_textdomain') || !function_exists('mp_stacks_slider_textdomain') || !function_exists('mp_stacks_socialgrid_textdomain') || !function_exists('mp_stacks_sociallinks_textdomain') || !function_exists('mp_stacks_video_backgrounds_textdomain') || !function_exists('mp_stacks_widgets_textdomain') || !function_exists('mp_stacks_woogrid_textdomain')){
 					
 	/**
 	 * Check if mp_stacks_features is installed
 	 */
 	require( plugin_dir_path(__FILE__) . 'required-add-ons/mp-stacks-features-check.php' ); 
-		
-	
-					
-	/**
-	 * Check if mp_stacks_forms is installed
-	 */
-	require( plugin_dir_path(__FILE__) . 'required-add-ons/mp-stacks-forms-check.php' ); 
 		
 	
 					
@@ -40,23 +33,9 @@ if (!function_exists('mp_stacks_features_textdomain') || !function_exists('mp_st
 	
 					
 	/**
-	 * Check if mp_stacks_icons is installed
-	 */
-	require( plugin_dir_path(__FILE__) . 'required-add-ons/mp-stacks-icons-check.php' ); 
-		
-	
-					
-	/**
 	 * Check if mp_stacks_linkgrid is installed
 	 */
 	require( plugin_dir_path(__FILE__) . 'required-add-ons/mp-stacks-linkgrid-check.php' ); 
-		
-	
-					
-	/**
-	 * Check if mp_stacks_mailchimp is installed
-	 */
-	require( plugin_dir_path(__FILE__) . 'required-add-ons/mp-stacks-mailchimp-check.php' ); 
 		
 	
 					
@@ -71,27 +50,6 @@ if (!function_exists('mp_stacks_features_textdomain') || !function_exists('mp_st
 	 * Check if mp_stacks_postgrid is installed
 	 */
 	require( plugin_dir_path(__FILE__) . 'required-add-ons/mp-stacks-postgrid-check.php' ); 
-		
-	
-					
-	/**
-	 * Check if mp_stacks_second_text is installed
-	 */
-	require( plugin_dir_path(__FILE__) . 'required-add-ons/mp-stacks-second-text-check.php' ); 
-		
-	
-					
-	/**
-	 * Check if mp_stacks_second_video is installed
-	 */
-	require( plugin_dir_path(__FILE__) . 'required-add-ons/mp-stacks-second-video-check.php' ); 
-		
-	
-					
-	/**
-	 * Check if mp_stacks_shadows is installed
-	 */
-	require( plugin_dir_path(__FILE__) . 'required-add-ons/mp-stacks-shadows-check.php' ); 
 		
 	
 					
@@ -178,7 +136,7 @@ else{
 	 */
 	function mp_stacks_templates_leben_home_to_default_stacks( $default_stacks_to_create ){ 
 				
-		$default_stacks_to_create['page']['leben_home'] = array( 'title' => 'Home','is_home' => true,'page_template' => 'default','add_to_primary_menu' => 'true', );
+		$default_stacks_to_create['page']['leben_home'] = array( 'title' => 'Home','is_home' => true,'page_template' => 'page','add_to_primary_menu' => 'true', );
 		
 		return $default_stacks_to_create;
 	
