@@ -30,5 +30,5 @@ See full instructions at http://mintplugins.com/doc/leben-theme-bundle
 
 == Changelog ==
 	
-= 1.0.0.0 = December 10, 2015
+= 1.0.0.0 = April 20, 2016
 * Original release
