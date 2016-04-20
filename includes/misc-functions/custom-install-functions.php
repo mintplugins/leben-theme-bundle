@@ -91,44 +91,46 @@ function leben_theme_bundle_fancy_theme_name_custom( $fancy_theme_name ){
 add_filter( 'leben_theme_bundle_fancy_theme_name', 'leben_theme_bundle_fancy_theme_name_custom' );
 
 /**
- * Set up the Smooth Scroll plugin's default setting for the Leben Theme Bundle
+ * WooCommerce doesn't have this function defined upon installation so we custom define it for them here to prevent errors.
  *
  * @since    1.0.0
  * @link     http://mintplugins.com/doc/
  * @see      function_name()
- * @param    string $theme_bundle_slug
- * @return   string $theme_bundle_slug
+ * @param    void
+ * @return   void
  */
-
-function leben_theme_bundle_smooth_scroll_up_setup( $theme_bundle_slug ){
-	
-	if ( $theme_bundle_slug == 'leben_theme_bundle' ){
-		
-		//MP Smooth Scroll Up Plugin Default Settings
-		$smooth_scroll_up_setting = array(
-			'scrollup_text' => NULL,
-			'scrollup_type' => 'image',
-			'scrollup_position' => 'right', 
-			'scrollup_show' => '1',
-			'scrollup_mobile' => '0',
-			'scrollup_animation' => NULL,
-			'scrollup_distance' => NULL,
-			'scrollup_attr' => NULL 
-		);
-		update_option( 'scrollup_settings', $smooth_scroll_up_setting );
-		
-	}
-}
-add_action( 'mp_stacks_additional_installation_actions', 'leben_theme_bundle_smooth_scroll_up_setup' );
 function leben_maybe_define_wc_functions(){
 	if (!function_exists('wc_get_screen_ids')) {
 		function wc_get_screen_ids (){
-			return false;
+			
+			$wc_screen_id = sanitize_title( __( 'WooCommerce', 'woocommerce' ) );
+			$screen_ids   = array(
+				'toplevel_page_' . $wc_screen_id,
+				$wc_screen_id . '_page_wc-reports',
+				$wc_screen_id . '_page_wc-settings',
+				$wc_screen_id . '_page_wc-status',
+				$wc_screen_id . '_page_wc-addons',
+				'toplevel_page_wc-reports',
+				'product_page_product_attributes',
+				'edit-product',
+				'product',
+				'edit-shop_coupon',
+				'shop_coupon',
+				'edit-product_cat',
+				'edit-product_tag',
+				'edit-product_shipping_class',
+				'profile',
+				'user-edit'
+			);
+		
+			foreach ( wc_get_order_types() as $type ) {
+				$screen_ids[] = $type;
+				$screen_ids[] = 'edit-' . $type;
+			}
+		
+			return apply_filters( 'woocommerce_screen_ids', $screen_ids );
+
 		}
 	}
 }
 add_action( 'admin_init', 'leben_maybe_define_wc_functions');
-
-
-
-
