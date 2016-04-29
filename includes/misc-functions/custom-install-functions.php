@@ -3,11 +3,11 @@
  * Custom Installation Functions for the Leben Theme Bundle. Make custom changes for installation here.
  *
  * Strings:
- * LANDSCAPE
+ * LEBEN
  * Leben Theme Bundle
  * leben_theme_bundle
  * leben-theme-bundle
- * landscape
+ * leben
  * Leben
  * 
  * @link http://mintplugins.com/doc/

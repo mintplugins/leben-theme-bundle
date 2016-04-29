@@ -3,11 +3,11 @@
  * Installaion Functions for the Leben Theme Bundle. This file is standard for any Theme Bundle and should be left alone other than find and replacing.
  *
  * Strings: 
- * LANDSCAPE
+ * LEBEN
  * Leben Theme Bundle
  * leben_theme_bundle
  * leben-theme-bundle
- * landscape
+ * leben
  * Leben
  *
  * All other custom changes are made in the "custom-install-functions.php" file in the same directory as this file.

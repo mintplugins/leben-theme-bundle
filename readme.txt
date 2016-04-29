@@ -3,7 +3,7 @@ Contributors: johnstonphilip
 Donate link: http://mintplugins.com/
 Tags: page, builder, stacks, bricks
 Requires at least: 3.5
-Tested up to: 4.4
+Tested up to: 4.5
 Stable tag: 1.0.0.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
